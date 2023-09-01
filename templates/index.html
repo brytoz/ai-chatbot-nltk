@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chatbot Landing page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,600;0,700;1,300;1,400&display=swap");
+    </style>
+  </head>
+  <body
+    style="background-color: #242424; font-family: Titillium Web, sans-serif"
+  >
+    <div
+      style="z-index: 80"
+      class="overflow-hidden bg-inherit w-full flex md:px-12 overflow-x-hidden"
+    >
+      <div
+        class="overflow-hidden relative w-full mt-12 md:mt-4 justify-center items-center content-center flex lg:pl-8 md:w-1/2"
+      >
+        <div
+          class="overflow-hidden w-full flex-wrap justify-begin items-start pt-12 md:pt-0 space-y-4 md:space-y-12 px-4 md:px-0 text-center md:text-left text-[#d3d3d3]"
+        >
+          <div
+            class="relative overflow-hidden"
+            style="z-index: 1; opacity: 1"
+          ></div>
+          <div
+            class="w-full flex justify-center md:justify-start items-center text-4xl lg:text-6xl font-extrabold md:pt-[-8]"
+          >
+            Emeka, Your Personal AI Chatbot!
+          </div>
+          <div
+            class="w-full text-sm md:text-base font-n ormal tracking-wide leading-[2em]"
+          >
+            Welcome to the future of communication, where technology meets
+            conversation. Introducing our advanced AI chatbot, designed to
+            simplify and enhance your interactions like never before.
+            <p>
+              Whether you're seeking quick answers to your queries or engaging
+              in meaningful conversations, our AI chatbot is here to assist you.
+              Powered by cutting-edge natural language processing algorithms, it
+              understands your messages just like a human would.
+            </p>
+          </div>
+
+          <div class="flex-row space-x-4 pb-3 md:pb-8">
+            <div class="inline-flex rounded-md pt-2">
+              <a 
+              href="{{ url_for('messages') }}"
+              >
+                <span
+                  class="bg-cyan-500 hover:md:ml-3 inline-flex items-center justify-center px-6 py-1 md:py-4 border border-transparent text-base md:text-xl rounded-full focus:outline-none focus:shadow-outline shadow-2xl shadow-blue-600/50 transition duration-500 ease-in-out transform hover:-translate-z-1 hover:scale-110 text-white"
+                >
+                  Start Chat Now
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- {/* small screeen screen */} -->
+      <div
+        class="w-full mt-12 md:w-1/2 flex justify-center items-center hidden md:inline-block lg:hidden lg:mr-6"
+      >
+        <div class="flex h-screen justify-center items-center">
+          <img
+          src="{{url_for('static', filename='ai.png')}}"
+            alt="chatbot"
+            class="w-2/4 height transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+          />
+        </div>
+      </div>
+
+      <!-- {/* large screen */} -->
+      <div
+        class="w-full md:w-1/2 flex justify-center items-center hidden md:hidden lg:inline-block lg:mr-6"
+      >
+        <img
+          src="{{url_for('static', filename='ai.png')}}"
+          alt="chatbot"
+          class="w-full height transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+        />
+      </div>
+    </div>
+  </body>
+</html>
